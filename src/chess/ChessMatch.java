@@ -1,6 +1,9 @@
 package chess;
 
 import boardgame.Board;
+import boardgame.Position;
+import chess.pieces.King;
+import chess.pieces.Rook;
 
 public class ChessMatch {
 	
@@ -10,6 +13,8 @@ public class ChessMatch {
 		
 		board = new Board(8,8); // chama o construtor da classe Board a qual cria uma matriz 8x8 
 		//com elementos do tipo Piece iniciando com null
+		initialSetup();
+		
 	}
 
 	public ChessPiece[][] getPiece()
@@ -26,5 +31,12 @@ public class ChessMatch {
 		}
 		return mat;
 	}
-	
+	private void initialSetup() {
+		
+		board.placePiece(new Rook(board, Color.WHITE), new Position(2, 1));
+		board.placePiece(new King(board, Color.BLACK), new Position(0, 4));
+		
+		
+		
+	}
 }
