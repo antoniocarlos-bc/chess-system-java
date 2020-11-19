@@ -60,6 +60,11 @@ public class ChessMatch {
 		{
 			throw new ChessException("There is no piece on source position");
 		}
+		if(!board.piece(position).IsThereAnyPossibleMove())
+		{
+			throw new ChessException("There is no possible moves for the chosen piece.");
+			
+		}
 		
 	}
 	
@@ -72,7 +77,7 @@ public class ChessMatch {
 	}
 	private void initialSetup() {
 		
-		placeNewPiece('b', 6, new Rook(board, Color.WHITE));
+		//placeNewPiece('b', 6, new Rook(board, Color.WHITE));
 		placeNewPiece('e', 1, new King(board, Color.WHITE));
 		placeNewPiece('c', 1, new Rook(board, Color.WHITE));
         placeNewPiece('c', 2, new Rook(board, Color.WHITE));
