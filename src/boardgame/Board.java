@@ -86,18 +86,20 @@ public class Board {
 	
 	public boolean positionExists(Position position)
 	{
-		
+		System.out.println("$");
 		return positionExists(position.getRow(),position.getColumn());
 	}
 	
 	public boolean thereIsPiece(Position position)
 	{
-
-		if(! positionExists(position))
+        
+		if(!positionExists(position))
 		{
 			throw new BoardException("Posiotion not on the board");
 			
 		}
-		return piece(position) != null;
+		return piece(position)!=null;
+	
+		}
 	}
-}
+

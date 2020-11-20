@@ -27,7 +27,7 @@ public class Position {
 		return row + ", " + column;
 	}
 	
-	public void getValue(int row, int column)
+	public void setValue(int row, int column)
 	{
 		
 		this.row = row;
